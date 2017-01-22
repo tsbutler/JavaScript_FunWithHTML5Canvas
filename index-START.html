@@ -14,6 +14,7 @@ canvas.height = window.innerHeight;
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap ='round';
+// ctx.globalCompositeOperation = 'multiply';
 
 let isDrawing = false;
 let lastX = 0;
@@ -42,7 +43,7 @@ function draw(e) {
   if(ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
     direction = !direction;
   }
-  
+
   if(direction) {
     ctx.lineWidth++;
   } else {
